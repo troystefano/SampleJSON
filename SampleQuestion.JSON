@@ -1,0 +1,170 @@
+export const json = {
+  title: "Survey",
+  logoPosition: "right",
+  loadingHtml: null,
+  pages: [
+    {
+      //////////// Sample Question (Partial) ////////////////
+
+      name: "page1",
+      elements: [
+        {
+          /// question element ///
+
+          type: "radiogroup",
+          name: "dailyactivityabilityQuestion1",
+          domain: "activity",
+          domainText: {
+            default: "Activity",
+            es: "Actividad",
+            ht: "Aktivite"
+          },
+          subdomain: "dailyactivityability",
+          subdomainText: {
+            default: "Ability for daily activities",
+            es: "Habilidad para las actividades diarias",
+            ht: "Kapasite pou aktivite chak jou"
+          },
+          visibleIf: "{activeSubdomain} == 'dailyactivityability'",
+          title: {
+            default: "What best describes your swimming ability?",
+            es: "¿Qué describe mejor tu habilidad para nadar?",
+            ht: "Ki sa ki dekri kapasite ou pou naje a pi byen?"
+          },
+          description: {
+            default: "This is where the description goes...",
+            es: "Description en espanol"
+          },
+          defaultValue: null,
+          defaultValueExpression: null,
+          isRequired: false,
+          requiredIf: null,
+          readOnly: false,
+          clearIfInvisible: "none",
+          validators: [
+            {
+              type: "expression",
+              text: {
+                default: "Sample error message",
+                es: "Sample Spanish message"
+              },
+              expression: null
+            }
+          ],
+          choices: [
+            {
+              value: "Nonswimmer",
+              text: {
+                default: "Non-swimmer",
+                es: "No sabe nadar",
+                ht: "Pa ka naje"
+              }
+            },
+            {
+              value: "Basicswimmer",
+              text: {
+                default: "Can swim with support (wall, floor, or flotation device)",
+                es: "Puede nadar con apoyo (pared, piso o dispositivo flotante)",
+                ht: "Kapab naje ak sipo (mi, planche, oubyen yon bagay pou flote)"
+              },
+              visibleIf: null
+            },
+            {
+              value: "Intermediateswimmer",
+              text: {
+                default: "Intermediate (can swim a pool length and float on my back)",
+                es: "Intermedio (puede nadar la longitud de una piscina y flotar boca arriba)",
+                ht: "Entèmedyè (kapab naje nan lonjè yon pisin e flote sou do m')"
+              },
+              visibleIf: null
+            },
+            {
+              value: "Experiencedswimmer",
+              text: {
+                default: "Experienced (strong swimmer with endurance)",
+                es: "Experimentado (nadador fuerte con resistencia)",
+                ht: "Eksperyanse (bon naje ki genyèn rezistans)"
+              },
+              visibleIf: null
+            },
+            {
+              value: "Expertswimmer",
+              text: {
+                default: "Expert (strong swimmer in open water with endurance)",
+                es: "Experto (nadador fuerte en aguas abiertas con resistencia)",
+                ht: "Ekspè (bon naje nan dlo lib ak rezistans)"
+              },
+              visibleIf: null
+            }
+          ],
+          separateSpecialChoices: false,
+          showOtherItem: false,
+          showNoneItem: false,
+          otherPlaceholder: null,
+          noneText: null,
+          otherText: null,
+          otherErrorText: null,
+          showSelectAllItem: false,
+          valuePropertyName: "activity.dailyactivityability.question1",
+		  FIUTHRIVE: [
+			{
+			   questionClassification: "validated",
+			   questionSubclassification: "validated instrument",
+			   questionSource: "Google (making this up for the sample...)",
+			   // otherlistedfields: "etc..."
+			}
+		 ],
+          LOINC: [
+            {
+              relation: true,
+              version: "LOINC 2.76",
+			  construct: [
+					{
+					relation: "question.assessmentInstrument",
+					relationType: "match",
+					constructID: "L1384354",
+					constructID2: null,
+					constructText: "What best describes your swimming ability?",
+					}
+			  ],
+              reference: "LOINC URL etc.",
+              technicalNote: "Adapted for digital use."
+            }
+          ],
+          SNOMED: [
+            {
+              relation: true,
+              version: "SNOMED v Most Recent",
+			  construct: [
+					{
+					relation: "question.concept",
+					relationType: "linked",
+					constructID: 110292000",
+					constructID2: null,
+					constructText: "Difficulty swimming",
+					constructText2: null,
+					},
+					{
+					relation: "question.procedure",
+					relationType: "linked",
+					constructID: "113652000",
+					constructID2: null,
+					constructText: "Assessment of swimming proficiency",
+					constructText2: null
+					}
+			  ],
+              reference: "Snomed.com",
+              technicalNote: "Totally making these up!"
+            }
+          ],
+          ICD10: [
+            {
+              relation: false,
+              version: "ICD10 V 2",
+            }
+          ]
+        }
+      ]
+    }
+]
+}
