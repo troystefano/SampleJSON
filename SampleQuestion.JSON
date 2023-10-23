@@ -4,13 +4,9 @@ export const json = {
   loadingHtml: null,
   pages: [
     {
-      //////////// Sample Question (Partial) ////////////////
-
       name: "page1",
       elements: [
         {
-          /// question element ///
-
           type: "radiogroup",
           name: "dailyactivityabilityQuestion1",
           domain: "activity",
@@ -111,7 +107,6 @@ export const json = {
 			   questionClassification: "validated",
 			   questionSubclassification: "validated instrument",
 			   questionSource: "Google (making this up for the sample...)",
-			   // otherlistedfields: "etc..."
 			}
 		 ],
           LOINC: [
